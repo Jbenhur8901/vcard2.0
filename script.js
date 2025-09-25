@@ -1,15 +1,16 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Informations de contact au format vCard. Remplacez ces données par les vôtres.
+    // Informations de contact au format vCard.
     const vCardData = `BEGIN:VCARD
 VERSION:3.0
-N:Smith;Tina;;;Ph.D
-FN:Tina Smith Ph.D
-ORG:Valve Inc
-TITLE:Researcher
-TEL;TYPE=WORK,VOICE:+12341231234
-EMAIL;TYPE=PREF,INTERNET:tina@valve.research
-URL:https://www.valve.research
-ADR;TYPE=WORK,PREF:;;123 Research Rd;Anytown;90210;USA
+N:MATONDO;Jean Claude;;;
+FN:Jean Claude MATONDO
+ORG:HUB GROUP LTD
+TITLE:Gérant HUB DISTRIBUTION / CEO OF HUB GROUP LTD
+TEL;TYPE=WORK,VOICE:+242053501348
+TEL;TYPE=CELL,VOICE:+33623220333
+EMAIL;TYPE=PREF,INTERNET:jeanclaude.matondo@hub-distribution.com
+URL:https://www.hub-group.ae
+ADR;TYPE=WORK,PREF:;;Blvd Denis Sassou & O27 OCH la glacière;Brazzaville;;;République du Congo
 END:VCARD`;
 
     // Génération du QR code
@@ -34,7 +35,7 @@ END:VCARD`;
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'tina_smith_contact.vcf'; 
+            a.download = 'jean_claude_matondo_contact.vcf'; 
             
             document.body.appendChild(a);
             a.click();
