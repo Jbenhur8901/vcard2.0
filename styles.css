@@ -1,0 +1,221 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+    overflow: hidden;
+}
+
+.card-wrapper {
+    perspective: 1000px;
+}
+
+.card-v2 {
+    width: 380px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.6s ease;
+}
+
+.card-v2:hover {
+    transform: rotateY(5deg);
+}
+
+.card-header-v2 {
+    background-color: #e22c2c;
+    color: #ffffff;
+    padding: 30px;
+    padding-bottom: 90px;
+    position: relative;
+    clip-path: ellipse(150% 100% at 50% 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 80px;
+    height: 30px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.name-v2 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.phd {
+    font-size: 0.7em;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-left: 5px;
+}
+
+.role-company {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.profile-pic-container {
+    position: absolute;
+    bottom: -60px;
+    right: 30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.profile-pic-v2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-body-v2 {
+    padding: 30px;
+    padding-top: 80px;
+}
+
+.about-me {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.about-me h2 {
+    font-size: 1.3em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #666;
+}
+
+.contact-list-v2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.contact-list-v2 li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.contact-list-v2 a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-list-v2 a:hover {
+    color: #e22c2c;
+}
+
+.icon-v2 {
+    font-size: 1.1em;
+    margin-right: 15px;
+    color: #e22c2c;
+    width: 25px;
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.download-btn {
+    background-color: #e22c2c;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.download-btn:hover {
+    background-color: #7b20d1;
+    transform: translateY(-2px);
+}
+
+.download-btn i {
+    margin-right: 10px;
+}
+
+.qr-code-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+@media (max-width: 450px) {
+    .card-v2 {
+        width: 95%;
+        border-radius: 15px;
+    }
+    .card-header-v2 {
+        padding: 20px;
+        padding-bottom: 70px;
+    }
+    .profile-pic-container {
+        bottom: -50px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+    }
+    .name-v2 {
+        font-size: 1.8em;
+    }
+    .role-company {
+        font-size: 1em;
+    }
+    .card-body-v2 {
+        padding: 20px;
+        padding-top: 60px;
+    }
+}
